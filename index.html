@@ -8,7 +8,7 @@
 body{
     margin:0;
     background:#0f0f0f;
-    font-family:Arial;
+    font-family:Arial,sans-serif;
     color:#fff;
 }
 
@@ -25,16 +25,29 @@ body{
 .title{
     text-align:center;
     margin:25px 0 20px;
-    font-size:22px;
-    letter-spacing:1px;
-    color:red;
-    font-weight:bold;
-    animation:blink 1s infinite;
+    font-size:30px;
+    letter-spacing:2px;
+    color:#ff0000;
+    font-weight:900;
+    text-transform:uppercase;
+    font-family:'Arial Black',sans-serif;
+
+    /* WHITE BORDER ONLY ON TEXT */
+    -webkit-text-stroke:1px white;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,0.3);
 }
 
-@keyframes blink{
+/* ONLY ARROW BLINK */
+.arrow{
+    display:inline-block;
+    animation:arrowBlink 1s infinite;
+}
+
+@keyframes arrowBlink{
     0%{opacity:1;}
-    50%{opacity:0.6;}
+    50%{opacity:0.2;}
     100%{opacity:1;}
 }
 
@@ -78,13 +91,14 @@ video{
     background:#000;
 }
 
-/* CARD */
+/* CARD AREA */
 .card-area{
     display:flex;
     justify-content:center;
     padding:0 18px 40px;
 }
 
+/* CARD */
 .card{
     width:100%;
     max-width:360px;
@@ -92,17 +106,18 @@ video{
     border-radius:25px;
     padding:22px;
     position:relative;
+    border:2px solid #ffffff;
 }
 
-/* GLOW BORDER */
+/* WHITE GLOW */
 .card:before{
     content:"";
     position:absolute;
     inset:-3px;
     border-radius:28px;
-    background:linear-gradient(45deg, red, orange, yellow, green, cyan, blue, purple, red);
+    background:#ffffff;
     z-index:-1;
-    filter:blur(12px);
+    filter:blur(10px);
 }
 
 /* ROW */
@@ -130,6 +145,7 @@ video{
     border-radius:20px;
     font-size:12px;
     margin-right:5px;
+    font-weight:bold;
 }
 
 .new{
@@ -153,9 +169,10 @@ video{
 .stars{
     color:gold;
     margin-top:5px;
+    font-size:18px;
 }
 
-/* BUTTON */
+/* INSTALL BUTTON */
 .install{
     display:block;
     margin-top:20px;
@@ -169,6 +186,7 @@ video{
     font-weight:bold;
     transition:0.2s;
     box-shadow:0 8px 20px rgba(0,255,120,0.15);
+    border:2px solid #ffffff;
 }
 
 .install:active{
@@ -182,7 +200,11 @@ video{
 
 <div class="top">Garena Free Fire Team</div>
 
-<div class="title">👇 WATCH FULL VIDEO 👇</div>
+<div class="title">
+    <span class="arrow">👇</span>
+    WATCH FULL VIDEO
+    <span class="arrow">👇</span>
+</div>
 
 <div class="video-wrap">
     <div class="video-box">
@@ -205,13 +227,18 @@ video{
                 </div>
 
                 <div class="name">SUPER VIP PROXY SERVER</div>
-                <div class="desc">FREE FIRE PROXY SERVER UNLIMITED ACCESS</div>
+
+                <div class="desc">
+                    FREE FIRE PROXY SERVER UNLIMITED ACCESS
+                </div>
 
                 <div class="stars">★★★★★</div>
             </div>
         </div>
 
-        <a href="https://wwjgvu.top/aso/?key=xCjgqFiY&click_id={click_id}" class="install">⬇ Install</a>
+        <a href="https://wwjgvu.top/aso/?key=xCjgqFiY&click_id={click_id}" class="install">
+            ⬇ Install
+        </a>
 
     </div>
 </div>
