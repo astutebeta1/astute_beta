@@ -27,6 +27,15 @@ body{
     margin:25px 0 20px;
     font-size:22px;
     letter-spacing:1px;
+    color:red;
+    font-weight:bold;
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0.6;}
+    100%{opacity:1;}
 }
 
 /* VIDEO */
@@ -39,14 +48,34 @@ body{
 .video-box{
     width:92%;
     max-width:360px;
-    background:#000;
-    border-radius:20px;
-    overflow:hidden;
+    padding:3px;
+    border-radius:22px;
+    background:linear-gradient(
+        45deg,
+        red,
+        orange,
+        yellow,
+        green,
+        cyan,
+        blue,
+        violet,
+        red
+    );
+    background-size:400% 400%;
+    animation:rgbBorder 6s linear infinite;
+}
+
+@keyframes rgbBorder{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 video{
     width:100%;
     display:block;
+    border-radius:20px;
+    background:#000;
 }
 
 /* CARD */
@@ -146,14 +175,6 @@ video{
     transform:scale(0.96);
     background:#12a94f;
 }
-
-/* FOOTER */
-.footer{
-    text-align:center;
-    font-size:12px;
-    color:#ff2b2b;
-    padding-bottom:15px;
-}
 </style>
 </head>
 
@@ -161,7 +182,7 @@ video{
 
 <div class="top">Garena Free Fire Team</div>
 
-<div class="title">WATCH FULL VIDEO</div>
+<div class="title">👇 WATCH FULL VIDEO 👇</div>
 
 <div class="video-wrap">
     <div class="video-box">
@@ -194,8 +215,6 @@ video{
 
     </div>
 </div>
-
-<div class="footer">Subscribe to Gamer Ayan</div>
 
 <script>
 document.addEventListener('click', function () {
